@@ -7,14 +7,14 @@
           role="img"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
-          aria-labelledby="statsIconTitle"
-          stroke-width="2.5"
+          aria-labelledby="alignLeftIconTitle"
+          stroke-width="1"
           stroke-linecap="square"
           stroke-linejoin="miter"
           fill="none"
         >
-          <title id="statsIconTitle">Menu</title>
-          <path d="M6 7L15 7M6 12L18 12M6 17L12 17" />
+          <title id="alignLeftIconTitle">Menu</title>
+          <path d="M6 10L14 10M6 6L18 6M6 14L18 14M6 18L14 18" />
         </svg>
       </div>
 
@@ -24,23 +24,20 @@
             <div>
               <svg
                 class="sider-icon"
-                viewBox="0 0 24 24"
+                role="img"
                 xmlns="http://www.w3.org/2000/svg"
-                aria-labelledby="appsAltIconTitle"
-                stroke-width="2.5"
+                viewBox="0 0 24 24"
+                aria-labelledby="gridLargeIconTitle"
+                stroke-width="1"
                 stroke-linecap="square"
                 stroke-linejoin="miter"
+                fill="none"
               >
-                <title id="appsAltIconTitle">Apps drawer</title>
-                <rect x="5" y="5" width="2" height="2" />
-                <rect x="11" y="5" width="2" height="2" />
-                <rect x="17" y="5" width="2" height="2" />
-                <rect x="5" y="11" width="2" height="2" />
-                <rect x="11" y="11" width="2" height="2" />
-                <rect x="17" y="11" width="2" height="2" />
-                <rect x="5" y="17" width="2" height="2" />
-                <rect x="11" y="17" width="2" height="2" />
-                <rect x="17" y="17" width="2" height="2" />
+                <title id="gridLargeIconTitle">Large Grid</title>
+                <rect width="7" height="7" x="3" y="3" />
+                <rect width="7" height="7" x="14" y="3" />
+                <rect width="7" height="7" x="3" y="14" />
+                <rect width="7" height="7" x="14" y="14" />
               </svg>
             </div>
           </li>
@@ -52,7 +49,7 @@
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 aria-labelledby="dashboardIconTitle"
-                stroke-width="2.5"
+                stroke-width="1"
                 stroke-linecap="square"
                 stroke-linejoin="miter"
                 fill="none"
@@ -74,7 +71,7 @@
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 aria-labelledby="contactBookIconTitle"
-                stroke-width="2.5"
+                stroke-width="1"
                 stroke-linecap="square"
                 stroke-linejoin="miter"
                 fill="none"
@@ -97,22 +94,35 @@
                 role="img"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
-                aria-labelledby="fileIconTitle"
-                stroke-width="2.5"
+                aria-labelledby="folderIconTitle"
+                stroke-width="1"
                 stroke-linecap="square"
                 stroke-linejoin="miter"
                 fill="none"
               >
-                <title id="fileIconTitle">File</title>
-                <path stroke-linecap="round" d="M13 3v6h6" />
-                <path d="M13 3l6 6v12H5V3z" />
+                <title id="folderIconTitle">Folder</title>
+                <path d="M3 5h6l1 2h11v12H3z" />
               </svg>
             </div>
           </li>
         </ul>
       </div>
     </el-aside>
-    <el-container></el-container>
+    <el-container class="app-container">
+      <el-header height="100px">
+        <div class="brand">
+          <span class="text-3xl font-brand capitalize text-secondary"
+            >align</span
+          >
+        </div>
+        <div class="nav"></div>
+        <div class="user-controls"></div>
+      </el-header>
+      <el-container>
+        <el-aside width="375px"></el-aside>
+        <el-main></el-main>
+      </el-container>
+    </el-container>
   </el-container>
 </template>
 
@@ -140,6 +150,7 @@ export default {
         @apply text-primary;
       }
     }
+    /*  FIXME: this is a terrible name and I think there's hacky code */
     .screens {
       @apply flex flex-col flex-grow mt-8;
       ul {
@@ -152,6 +163,17 @@ export default {
         @apply text-gray-400 transition duration-150;
       }
     }
+  }
+}
+
+.app-container {
+  .el-header {
+    @apply flex justify-between items-center py-4 px-8 border-b;
+  }
+  .el-aside {
+  }
+  .el-main {
+    @apply bg-white;
   }
 }
 </style>

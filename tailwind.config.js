@@ -11,6 +11,9 @@ module.exports = {
           "2": "#3A506B"
         }
       },
+      fontFamily: {
+        brand: ["Nova Round", "curs"]
+      },
       inset: {
         full: "100%"
       },
