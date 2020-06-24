@@ -2,7 +2,9 @@
   <div class="grid-container">
     <header class="header">
       <div class="header__search">search...</div>
-      <div class="header__avatar">Your face</div>
+      <div class="header__avatar">
+        <el-button>Your face</el-button>
+      </div>
     </header>
     <aside class="sidenav">
       <ul class="sidenav__list">
