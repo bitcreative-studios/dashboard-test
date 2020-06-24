@@ -1,6 +1,16 @@
 module.exports = {
   theme: {
     extend: {
+      colors: {
+        primary: "#ff0844",
+        secondary: "#111E6C",
+        tertiary: "#fabc18",
+        dark: {
+          default: "#0B132B",
+          "1": "#1C2541",
+          "2": "#3A506B"
+        }
+      },
       inset: {
         full: "100%"
       },
@@ -75,9 +85,6 @@ module.exports = {
     wordBreak: ["responsive"],
     width: ["responsive"],
     zIndex: ["responsive"]
-  },
-  corePlugins: {
-    container: false
   },
   plugins: []
 };

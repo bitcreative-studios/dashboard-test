@@ -1,22 +1,22 @@
 <template>
-  <div class="main-overview">
-    <div class="overviewcard">
+  <el-row :gutter="20">
+    <el-col :span="6" class="overviewcard">
       <div class="overviewcard__icon">Overview</div>
       <div class="overviewcard__info">Card</div>
-    </div>
-    <div class="overviewcard">
+    </el-col>
+    <el-col :span="6" class="overviewcard">
       <div class="overviewcard__icon">Overview</div>
       <div class="overviewcard__info">Card</div>
-    </div>
-    <div class="overviewcard">
+    </el-col>
+    <el-col :span="6" class="overviewcard">
       <div class="overviewcard__icon">Overview</div>
       <div class="overviewcard__info">Card</div>
-    </div>
-    <div class="overviewcard">
+    </el-col>
+    <el-col :span="6" class="overviewcard">
       <div class="overviewcard__icon">Overview</div>
       <div class="overviewcard__info">Card</div>
-    </div>
-  </div>
+    </el-col>
+  </el-row>
 </template>
 
 <script>
@@ -27,15 +27,6 @@ export default {
 
 <style scoped lang="scss">
 //noinspection CssInvalidAtRule
-.main-overview {
-  /*  FIXME: NO_MARGIN_WITHIN_COMPONENT */
-  @apply grid gap-5 m-5 transition duration-500;
-  /* where the magic happens !!*/
-  grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
-  /*  specifying the row height => card-height*/
-  grid-auto-rows: 120px;
-  .overviewcard {
-    @apply flex items-center justify-between p-5 bg-gray-300;
-  }
+.el-row {
 }
 </style>

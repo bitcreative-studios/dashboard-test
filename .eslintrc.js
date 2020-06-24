@@ -9,6 +9,7 @@ module.exports = {
   },
   rules: {
     "no-unused-vars": process.env.NODE_ENV === "production" ? 2 : 1,
+    "vue/no-unused-components": process.env.NODE_ENV === "production" ? 2 : 1,
     "no-console": process.env.NODE_ENV === "production" ? 1 : 0
   }
 };
