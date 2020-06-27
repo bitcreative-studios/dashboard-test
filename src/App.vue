@@ -1,7 +1,6 @@
 <template>
   <application-shell>
-    <el-container direction="vertical">
-      <el-row> </el-row>
+    <el-container>
       <main-content />
     </el-container>
   </application-shell>
